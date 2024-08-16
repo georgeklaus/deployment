@@ -1,0 +1,208 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li, form, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: url('images/landscape.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: #f0ece2;
+}
+
+/* Header */
+header {
+    background-color: rgba(46, 70, 0, 0.85);
+    color: #ffd700;
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f9d71c;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(46, 70, 0, 0.85);
+    color: #ffd700;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Sections */
+section {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Forms */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2e4600;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form input[type="date"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+    border-color: #2e4600;
+    outline: none;
+}
+
+/* Buttons */
+form button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #ffd700;
+    color: #2e4600;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #2c5f2d;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Expenses List Section */
+#expenseListSection {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    max-width: 400px;
+    margin-bottom: 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Expenses List Items */
+#expenseList div {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#expenseList div p {
+    margin: 5px 0;
+    color: #ffffff;
+}
+
+/* Buttons inside the expense list */
+#expenseList div button {
+    background-color: #ffd700;
+    color: #2e4600;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#expenseList div button:hover {
+    background-color: #f9d71c;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    header, footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    form button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    #expenseListSection {
+        max-width: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: 10px;
+    }
+}
